@@ -1,0 +1,1142 @@
+{
+	"info": {
+		"_postman_id": "cef2133e-0943-4118-9624-377dabe85921",
+		"name": "Cross Border Limit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17456066"
+	},
+	"item": [
+		{
+			"name": "Check limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"/* \r",
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/ID761736/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_747c9b10-d3e0-4727-8a5c-d585f93b4dae' IssueInstant='2024-05-07T08:19:39.637Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_747c9b10-d3e0-4727-8a5c-d585f93b4dae'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>w6t91eDPxMnXHnJrJAupt7qkHPDDmjfNgss1bTf7hxo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>O+K+IkCyS/ZeKXOz+WsSf+Y1Y+cdsYU8GZky6UQd2ZlMS3C3yj2Gu+qEfRan+HIMKvlvc6KeH54L3OxPITSDY+MCZ/uetVeMCIl5iKXJkDEHBEzqtF8lFn2p9Ezi14memMJg0XKYI+93SuhIwaJg1W5qMxP9V5T8eT6TKr6eEM3z6Bdziirt11BTPxVzRbK7mKA5PCHhesKzmBVM02eue+hShYcZPAtOCx7vh8B0ICtJJZuwVTHbCVZB+IfJfisX2QlRhHo+B6j4sngSEXa2VaIVaF03ydVBTJ6wbDZi6K1IS/cLI9tuj/sbzdGA6gIywWeenjz3wQC0TcwiAdZhiA==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T08:19:38.637Z' NotOnOrAfter='2024-05-07T08:20:39.637Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>",
+						"description": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_747c9b10-d3e0-4727-8a5c-d585f93b4dae' IssueInstant='2024-05-07T08:19:39.637Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_747c9b10-d3e0-4727-8a5c-d585f93b4dae'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>w6t91eDPxMnXHnJrJAupt7qkHPDDmjfNgss1bTf7hxo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>O+K+IkCyS/ZeKXOz+WsSf+Y1Y+cdsYU8GZky6UQd2ZlMS3C3yj2Gu+qEfRan+HIMKvlvc6KeH54L3OxPITSDY+MCZ/uetVeMCIl5iKXJkDEHBEzqtF8lFn2p9Ezi14memMJg0XKYI+93SuhIwaJg1W5qMxP9V5T8eT6TKr6eEM3z6Bdziirt11BTPxVzRbK7mKA5PCHhesKzmBVM02eue+hShYcZPAtOCx7vh8B0ICtJJZuwVTHbCVZB+IfJfisX2QlRhHo+B6j4sngSEXa2VaIVaF03ydVBTJ6wbDZi6K1IS/cLI9tuj/sbzdGA6gIywWeenjz3wQC0TcwiAdZhiA==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T08:19:38.637Z' NotOnOrAfter='2024-05-07T08:20:39.637Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11808850988800A",
+						"description": "HK11804105288800"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"debitAccount\": {\r\n        \"country\": \"HK\",\r\n        \"internalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avz0QymZ5Lp9nbqGbba9dkVfkHsOGmwg9K1t43GCJgS5mnXu3_EvF0zwJmeFRslRn-CT9p_wuZt1v_4Z0SMX9QfWoeKkiyY=\",\r\n        \"countryCode\": \"HK\",\r\n        \"externalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avz0QymZ5Lp9nbqGbba9dkVfkHsOGmwg9K1t43GCJgS5mnXu3_EvF0zwJmeFRslRn-CT9p_wuZt1v_4Z0SMX9QfWoeKkiyY=\",\r\n        \"currency\": \"HKD\",\r\n        \"currencyCode\": \"HKD\",\r\n        \"productType\": \"HKDAVCUA\",\r\n        \"applicationName\": \"AP_GSP_HK_BRTB\"\r\n    },\r\n    \"creditAccount\": {\r\n        \"country\": \"AU\",\r\n        \"internalIdentifier\": \"VEdTRlNCU0dTQlNHYveHEYaNRimY7Lt10vCAHbazMHNXgRpQRBlTkPNb6WBcr4EYg6OGwTKDnziWN7we\",\r\n        \"countryCode\": \"AU\",\r\n        \"externalIdentifier\": \"VEdTRlNCU0dTQlNHYveHEYaNRimY7Lt10vCAHbazMHNXgRpQRBlTkPNb6WBcr4EYg6OGwTKDnziWN7we\",\r\n        \"currency\": \"USD\",\r\n        \"currencyCode\": \"USD\",\r\n        \"productType\": \"CUA\",\r\n        \"applicationName\": \"AUGSP_RC\"\r\n    },\r\n    \"contact\": {\r\n        \"isEmailUpdated\": false,\r\n        \"languagePreference\": \"en\",\r\n        \"electronicAddress\": \"609121917@qq.com\"\r\n    },\r\n    \"transferType\": \"IMM\",\r\n    \"description\": \"null\",\r\n    \"debitAmount\": {\r\n        \"value\": \"32\",\r\n        \"currencyCode\": \"HKD\",\r\n        \"precisionCount\": 0,\r\n        \"signIndicator\": 1\r\n    },\r\n    \"transferDate\": \"2024-04-05T00:00:00.000+08:00\",\r\n    \"applicationName\": \"AP_GSP_HK_BRTB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://group-tfx-microservices-fxaas-external-api-99.hsbc-gvgt-fxaas-cert.svc.default.shp.ape1.pre-prod.aws.cloud.hsbc/api/transfer/gt",
+					"protocol": "https",
+					"host": [
+						"group-tfx-microservices-fxaas-external-api-99",
+						"hsbc-gvgt-fxaas-cert",
+						"svc",
+						"default",
+						"shp",
+						"ape1",
+						"pre-prod",
+						"aws",
+						"cloud",
+						"hsbc"
+					],
+					"path": [
+						"api",
+						"transfer",
+						"gt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check limit Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/HKGTFF1/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11804103788800",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"debitAccount\": {\r\n        \"country\": \"HK\",\r\n        \"internalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avD9RiqX5Lp9nbqGaLa9dkxBkHsOGmwg9K1k_XGCJhStjXXu1u8vF0zwJmeFRslRn-CT9p_wuU1Hc_Y8BuDkKe-GrxP7qhw=\",\r\n        \"countryCode\": \"HK\",\r\n        \"externalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avD9RiqX5Lp9nbqGaLa9dkxBkHsOGmwg9K1k_XGCJhStjXXu1u8vF0zwJmeFRslRn-CT9p_wuU1Hc_Y8BuDkKe-GrxP7qhw=\",\r\n        \"currency\": \"AUD\",\r\n        \"currencyCode\": \"AUD\",\r\n        \"productType\": \"AUDAVSAV\",\r\n        \"applicationName\": \"AP_GSP_HK_BRTB\"\r\n    },\r\n    \"creditAccount\": {\r\n        \"country\": \"ID\",\r\n        \"internalIdentifier\": \"VEdTRlNCU0dTQlNHauaHCYaPRimX7bp21fGEFr61MHNHgmpQRBlTkPNb4XErmcSgZ2XYwbmdIlgyvolb\",\r\n        \"countryCode\": \"ID\",\r\n        \"externalIdentifier\": \"VEdTRlNCU0dTQlNHauaHCYaPRimX7bp21fGEFr61MHNHgmpQRBlTkPNb4XErmcSgZ2XYwbmdIlgyvolb\",\r\n        \"currency\": \"USD\",\r\n        \"currencyCode\": \"USD\",\r\n        \"productType\": \"SV1\",\r\n        \"applicationName\": \"APP018\"\r\n    },\r\n    \"contact\": {\r\n        \"isEmailUpdated\": false,\r\n        \"languagePreference\": \"zh_CN\",\r\n        \"electronicAddress\": \"609121917@qq.com\"\r\n    },\r\n    \"transferType\": \"FDT\",\r\n    \"description\": \"null\",\r\n    \"transferDate\": \"2024-05-01T00:00:00.000+08:00\",\r\n    \"creditAmount\": {\r\n        \"value\": \"10\",\r\n        \"currencyCode\": \"USD\",\r\n        \"precisionCount\": 0,\r\n        \"signIndicator\": 1\r\n    },\r\n    \"creditReasonCode\": \"1241\",\r\n    \"applicationName\": \"AP_GSP_HK_BRTB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/transfer/gt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transfer",
+						"gt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check limit Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-HSBC-CAM-Level",
+								"value": "40",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Channel-Id",
+								"value": "MOBILE",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Chnl-CountryCode",
+								"value": "HK",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Chnl-Group-Member",
+								"value": "HBAP",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Locale",
+								"value": "en_GB",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Request-Correlation-Id",
+								"value": "{{X-HSBC-Request-Correlation-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Saml3",
+								"value": "{{saml3}}",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Session-Correlation-Id",
+								"value": "{{X-HSBC-Session-Correlation-Id}}",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Src-Device-Id",
+								"value": "145.26.54.24",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-Src-UserAgent",
+								"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405",
+								"type": "text"
+							},
+							{
+								"key": "X-HSBC-User-Id",
+								"value": "HK11804103788800",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"debitAccount\": {\r\n        \"country\": \"HK\",\r\n        \"internalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avD9RiqX5Lp9nbqGaLa9dkxBkHsOGmwg9K1k_XGCJhStjXXu1u8vF0zwJmeFRslRn-CT9p_wuU1Hc_Y8BuDkKe-GrxP7qhw=\",\r\n        \"countryCode\": \"HK\",\r\n        \"externalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avD9RiqX5Lp9nbqGaLa9dkxBkHsOGmwg9K1k_XGCJhStjXXu1u8vF0zwJmeFRslRn-CT9p_wuU1Hc_Y8BuDkKe-GrxP7qhw=\",\r\n        \"currency\": \"AUD\",\r\n        \"currencyCode\": \"AUD\",\r\n        \"productType\": \"AUDAVSAV\",\r\n        \"applicationName\": \"AP_GSP_HK_BRTB\"\r\n    },\r\n    \"creditAccount\": {\r\n        \"country\": \"ID\",\r\n        \"internalIdentifier\": \"VEdTRlNCU0dTQlNHauaHCYaPRimX7bp21fGEFr61MHNHgmpQRBlTkPNb4XErmcSgZ2XYwbmdIlgyvolb\",\r\n        \"countryCode\": \"ID\",\r\n        \"externalIdentifier\": \"VEdTRlNCU0dTQlNHauaHCYaPRimX7bp21fGEFr61MHNHgmpQRBlTkPNb4XErmcSgZ2XYwbmdIlgyvolb\",\r\n        \"currency\": \"USD\",\r\n        \"currencyCode\": \"USD\",\r\n        \"productType\": \"SV1\",\r\n        \"applicationName\": \"APP018\"\r\n    },\r\n    \"contact\": {\r\n        \"isEmailUpdated\": false,\r\n        \"languagePreference\": \"zh_CN\",\r\n        \"electronicAddress\": \"609121917@qq.com\"\r\n    },\r\n    \"transferType\": \"FDT\",\r\n    \"description\": \"null\",\r\n    \"transferDate\": \"2024-05-04T00:00:00.000+08:00\",\r\n    \"creditAmount\": {\r\n        \"value\": \"10\",\r\n        \"currencyCode\": \"USD\",\r\n        \"precisionCount\": 0,\r\n        \"signIndicator\": 1\r\n    },\r\n    \"creditReasonCode\": \"1241\",\r\n    \"applicationName\": \"AP_GSP_HK_BRTB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/transfer/gt",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transfer",
+								"gt"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-HSBC-Session-Correlation-Id",
+							"value": "c3e9acf2-9c57-4e12-a6d4-3bbe312f112e"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 04:00:41 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"transferProperties\": [\n        {\n            \"values\": [\n                \"GPO23ZVNBT\"\n            ],\n            \"key\": \"GDI_REF\"\n        }\n    ],\n    \"warningInfo\": [\n        {\n            \"code\": \"432900\",\n            \"detail\": {\n                \"cause\": \"WARNING_FDT_DELAY_ON_DUE_DATE\"\n            }\n        },\n        {\n            \"code\": \"432814\",\n            \"detail\": {\n                \"cause\": \"Bad FX Rate for FDT Transfer\"\n            }\n        }\n    ],\n    \"transferInstructions\": {\n        \"debitAccount\": {\n            \"country\": \"HK\",\n            \"internalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avD9RiqX5Lp9nbr1e8rEGF5VgiVQexlEqvNt44iBhUbUoIvkOPGHyhV83Do=\",\n            \"name\": \"\",\n            \"externalIdentifier\": \"VEdTRlNCU0dTQlNHEpP3avD9RiqX5Lp9nbr1e8rEGF5VgiVQexlEqvNt44iBhUbUoIvkOPGHyhV83Do=\",\n            \"currency\": \"AUD\",\n            \"productType\": \"AUDAVSAV\",\n            \"entity\": \"AP_GSP_HK_BRTB\"\n        },\n        \"creditAccount\": {\n            \"country\": \"ID\",\n            \"internalIdentifier\": \"VEdTRlNCU0dTQlNHauaHCYaPRimX7bp21fGEFr61MHNHgmpQRBlTkPNb4XErmcSgZ2XYwbmdIlgyvolb\",\n            \"name\": \"\",\n            \"externalIdentifier\": \"VEdTRlNCU0dTQlNHauaHCYaPRimX7bp21fGEFr61MHNHgmpQRBlTkPNb4XErmcSgZ2XYwbmdIlgyvolb\",\n            \"currency\": \"USD\",\n            \"productType\": \"SV1\",\n            \"entity\": \"APP018\"\n        },\n        \"transactionIdToken\": \"VEdTRlNCU0dTQlNHEZf5b_L5Ty7eouF2hv3VTei3YzR34WwDDil-qsth_Eu9QXbU6z-hp4lcUQqAE2fKNr8f1a_du9a2_27hfhHLBDe3vnOMS5eFl9_nKfNRFx5qhFt0lqxoBgbxVURfp6xt4dTbjqJBqXN6EDmuW_reD4yWUu1h-DIVHH6H_poCr-8YibjReiBnN9RA3Q30FVsBA_fTsi7HH9L_iXmyilD32njqJhJ7LydR37XgM56NfMzQLUXAc4CFZpudDsvjfED5_vf_V4HdJQrHIoAiew6k9PkepXQvaPM9AHnJ4RYDUJMwRW9VYmEQNCJIvj7dyhYI-cbJ\",\n        \"transactionIdentifier\": \"25656597\",\n        \"transferType\": \"FDT\",\n        \"amountSegment\": {\n            \"debitAmount\": null,\n            \"creditCurrency\": \"USD\",\n            \"debitCurrency\": null,\n            \"creditAmount\": 10\n        },\n        \"transferDate\": \"2024-05-04T10:00:00.000+08:00\",\n        \"responseCode\": 0,\n        \"status\": null\n    },\n    \"exchangeRate\": {\n        \"rate\": null,\n        \"sourceCurrencyCode\": null,\n        \"targetCurrencyCode\": null,\n        \"bookedRate\": true\n    },\n    \"contact\": {\n        \"telephoneNumber\": \"\",\n        \"electronicAddress\": \"609121917@qq.com\",\n        \"languagePreference\": \"zh_CN\"\n    },\n    \"transferReason\": {\n        \"debitReasonCode\": null,\n        \"creditReasonCode\": \"1241\",\n        \"debitReasonText\": null,\n        \"creditReasonText\": null,\n        \"description\": \"null\"\n    },\n    \"responseCode\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Mark limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"/*\r",
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/ID761736/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});\r",
+							"*/"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726' IssueInstant='2024-05-07T15:11:10.610Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>HJCXc8mhfCgOGMJZcrslcW0qlodkM1701bMUK8ie9XA=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>C2Nspp60SedshyB/dGGkhpy/oyKzm5LO6n+2O+anbk3jywqdiw3q5vfcHiNz3m6PY7DmOfMegwedcmWZ4QAq6vvStqcN03/LEsgZ3cq1acsf4cPsLDalo//JzVn7t8ft1CXaCQoeXJfR7Iai0sosEiDc8GSyd3UNj1+c8hh6RPyxuS6TYp+/zf9xvszNgZtHAJLDGmQBpXHbxqzploXW2uI7AOxTfn55suXj3Jtyx73cN3nNHBo3WfhnYWzYJ3xUGkwCcThvzuzydcrikoIs7dLt2fNaNS+tBGRwIYrMgqR/Mf04KeCrdH8G74HjF0D/cGANayLVFq/FsrM4A4XVTg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T15:11:09.610Z' NotOnOrAfter='2024-05-07T15:12:10.610Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>",
+						"description": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726' IssueInstant='2024-05-07T15:11:10.610Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>HJCXc8mhfCgOGMJZcrslcW0qlodkM1701bMUK8ie9XA=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>C2Nspp60SedshyB/dGGkhpy/oyKzm5LO6n+2O+anbk3jywqdiw3q5vfcHiNz3m6PY7DmOfMegwedcmWZ4QAq6vvStqcN03/LEsgZ3cq1acsf4cPsLDalo//JzVn7t8ft1CXaCQoeXJfR7Iai0sosEiDc8GSyd3UNj1+c8hh6RPyxuS6TYp+/zf9xvszNgZtHAJLDGmQBpXHbxqzploXW2uI7AOxTfn55suXj3Jtyx73cN3nNHBo3WfhnYWzYJ3xUGkwCcThvzuzydcrikoIs7dLt2fNaNS+tBGRwIYrMgqR/Mf04KeCrdH8G74HjF0D/cGANayLVFq/FsrM4A4XVTg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T15:11:09.610Z' NotOnOrAfter='2024-05-07T15:12:10.610Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11804105288800"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferAmount\": {\r\n        \"value\": 16,\r\n        \"currencyCode\": \"HKD\"\r\n    },\r\n    \"debitAccount\": {\r\n        \"countryCode\": \"HK\",\r\n        \"groupMember\": \"HBAP\"\r\n    },\r\n    \"creditAccount\": {\r\n        \"countryCode\": \"JE\",\r\n        \"groupMember\": \"MBOS\"\r\n    },\r\n    \"transactionIdToken\": \"VEdTRlNCU0dTQlNHEZf5b_T5QineouF2hv3VTei3YzR34WwDDil-qsRo5Uu9QXbU6z-hp49ZUQqAE2fKNr8f1a_dvdO2_27hfhjVBDe3rmebS5eMid_nKfVcEg9nlFt1ka1gBwP9V09Zrqxt59nen69RqXJ9ETGvXvbcBIqfUu1x6lMVHGOf_poCr-oYiSfKHsrKFVmrTby647t0BfA=\",\r\n    \"transferDate\": \"2024-04-05T00:00:00.000+08:00\",\r\n\t\"applicationName\": \"AP_GSP_HK_BRTB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/transfer/gt/25650540",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transfer",
+						"gt",
+						"25650540"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark limit Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/HKGTFF1/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11804103788800",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionIdToken\": \"VEdTRlNCU0dTQlNHEZf5b_L5TyzeouF2hv3VTei3YzR34WwDDil-qsth_Eu9QXbU6z-hp4lcUQqAE2fKNr8f1a_du9a2_27hfhHLBDe3vnOMS5eFl9_nKfNRFx5qhFt0lqxoBgbxVURfp6xt4dTbjqJBqXN6EDmuW_reD4yWUu1h-DIVHH6H_poCr-8YibjReiBnN9RA3Q30FVsBA_fTsi7HH9L_iXmyilD32njqJhJ7LydR37XgM56NfMzQLUXAc4CFZpudCMvjfED5_vf_V4HdJQrHIoAiew6k9PkepXQvaPM9AHnJ4RYDUJMwRQ_VQPbf9MnKY1YqoNB_eRj-\",\r\n    \"transferDate\": \"2024-05-02T10:00:00.000+08:00\",\r\n\t\"applicationName\": \"AP_GSP_HK_BRTB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/transfer/gt/25656595",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transfer",
+						"gt",
+						"25656595"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unmark limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"/**\r",
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/ID761736/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});\r",
+							" */"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726' IssueInstant='2024-05-07T15:11:10.610Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>HJCXc8mhfCgOGMJZcrslcW0qlodkM1701bMUK8ie9XA=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>C2Nspp60SedshyB/dGGkhpy/oyKzm5LO6n+2O+anbk3jywqdiw3q5vfcHiNz3m6PY7DmOfMegwedcmWZ4QAq6vvStqcN03/LEsgZ3cq1acsf4cPsLDalo//JzVn7t8ft1CXaCQoeXJfR7Iai0sosEiDc8GSyd3UNj1+c8hh6RPyxuS6TYp+/zf9xvszNgZtHAJLDGmQBpXHbxqzploXW2uI7AOxTfn55suXj3Jtyx73cN3nNHBo3WfhnYWzYJ3xUGkwCcThvzuzydcrikoIs7dLt2fNaNS+tBGRwIYrMgqR/Mf04KeCrdH8G74HjF0D/cGANayLVFq/FsrM4A4XVTg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T15:11:09.610Z' NotOnOrAfter='2024-05-07T15:12:10.610Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>",
+						"description": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726' IssueInstant='2024-05-07T15:11:10.610Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_fbbfe7cb-fb4b-4fe3-905e-47ef167b6726'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>HJCXc8mhfCgOGMJZcrslcW0qlodkM1701bMUK8ie9XA=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>C2Nspp60SedshyB/dGGkhpy/oyKzm5LO6n+2O+anbk3jywqdiw3q5vfcHiNz3m6PY7DmOfMegwedcmWZ4QAq6vvStqcN03/LEsgZ3cq1acsf4cPsLDalo//JzVn7t8ft1CXaCQoeXJfR7Iai0sosEiDc8GSyd3UNj1+c8hh6RPyxuS6TYp+/zf9xvszNgZtHAJLDGmQBpXHbxqzploXW2uI7AOxTfn55suXj3Jtyx73cN3nNHBo3WfhnYWzYJ3xUGkwCcThvzuzydcrikoIs7dLt2fNaNS+tBGRwIYrMgqR/Mf04KeCrdH8G74HjF0D/cGANayLVFq/FsrM4A4XVTg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T15:11:09.610Z' NotOnOrAfter='2024-05-07T15:12:10.610Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11808850988800A"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://group-tfx-microservices-fxaas-external-api-99.hsbc-gvgt-fxaas-cert.svc.default.shp.ape1.pre-prod.aws.cloud.hsbc/api/transfer/gt/25646572?applicationName=AP_GSP_HK_BRTB",
+					"protocol": "https",
+					"host": [
+						"group-tfx-microservices-fxaas-external-api-99",
+						"hsbc-gvgt-fxaas-cert",
+						"svc",
+						"default",
+						"shp",
+						"ape1",
+						"pre-prod",
+						"aws",
+						"cloud",
+						"hsbc"
+					],
+					"path": [
+						"api",
+						"transfer",
+						"gt",
+						"25646572"
+					],
+					"query": [
+						{
+							"key": "applicationName",
+							"value": "AP_GSP_HK_BRTB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unmark limit Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/HKGTFF1/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11804103788800",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/transfer/gt/25656595?applicationName=AP_GSP_HK_BRTB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transfer",
+						"gt",
+						"25656595"
+					],
+					"query": [
+						{
+							"key": "applicationName",
+							"value": "AP_GSP_HK_BRTB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FDT failed unmark limit local",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const options = {\r",
+							"    url: \"https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate\",\r",
+							"    method: 'POST',\r",
+							"    header: { 'content-type': 'application/json' },\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\"input_token_state\":{\"token_type\":\"CREDENTIAL\",\"username\":\"GB-SVCAT-GTFF\",\"password\":\"X34Qb2fvfGmDW3\"},\"output_token_state\":{\"token_type\":\"JWT\"}})\r",
+							"\r",
+							"    }\r",
+							"};\r",
+							"\r",
+							"pm.sendRequest(options, function (err, res) {\r",
+							"    var jsonData = res.json();\r",
+							"    if (err) {\r",
+							"        console.log(err);\r",
+							"    }\r",
+							"    else {\r",
+							"        console.log(jsonData.issued_token);\r",
+							"        pm.environment.set(\"ib2bToken\", jsonData.issued_token);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-Global-Channel-Id",
+						"value": "MOBILE",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "HSBC-CLIENT-IP",
+						"value": "145.26.54.24",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "873590",
+						"type": "default"
+					},
+					{
+						"key": "X-HSBC-GBGF",
+						"value": "RBWM",
+						"type": "default"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{ib2bToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentEngine\": \"GDI\",\r\n    \"serviceId\": \"HK11804103788800\",\r\n    \"entityServiceId\": \"HKGPHUBPIB=HK11804103788800\",\r\n    \"transactionInstructions\": {\r\n        \"paymentType\": \"GT\",\r\n        \"transactionId\": \"25645690\",\r\n        \"confirmationNo\": \"GPO2VSMDJJ\",\r\n        \"transferDate\": \"2024-03-20\",\r\n        \"transferType\": \"IMM\",\r\n        \"status\": \"Rejected\",\r\n        \"realTimeFailure\": \"N\",\r\n        \"debitAccount\": {\r\n            \"countryCode\": \"HK\",\r\n            \"groupMember\": \"HKAP\",\r\n            \"entity\": \"AP_GSP_HK_BRTB\",\r\n            \"productType\": \"AUDAVSAV\",\r\n            \"internalAccountNumber\": \"118041037888\",\r\n            \"externalAccountNumber\": \"118041037888\",\r\n            \"currencyCode\": \"AUD\",\r\n            \"name\": \"XXXXXVEN MXXXXXR\"\r\n        },\r\n        \"creditAccount\": {\r\n            \"countryCode\": \"MY\",\r\n            \"groupMember\": \"IUAT\",\r\n            \"entity\": \"APP024\",\r\n            \"productType\": \"WL1\",\r\n            \"internalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"externalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"currencyCode\": \"MYR\",\r\n            \"name\": \"TAN\"\r\n        },\r\n        \"amountSegment\": {\r\n            \"specifiedAmountFlag\": \"D\",\r\n            \"validate\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": \"28.42\"\r\n            },\r\n            \"enact\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10.0,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": 29.5\r\n            }\r\n        }\r\n    },\r\n    \"exchangeRate\": {\r\n        \"validate\": {\r\n            \"bookedRate\": \"N\",\r\n            \"rate\": 2.8428826,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        },\r\n        \"enact\": {\r\n            \"rate\": 2.9498002,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        }\r\n    },\r\n    \"contact\": {\r\n        \"emailAddress\": \"609121917@qq.com\",\r\n        \"languagePreference\": \"en\",\r\n        \"telephoneNumber\": \"\",\r\n        \"emailTriggered\": \"N\"\r\n    },\r\n    \"transferReason\": {\r\n        \"debitReasonCode\": \"\",\r\n        \"debitReasonText\": \"\",\r\n        \"creditReasonCode\": \"\",\r\n        \"creditReasonText\": \"\",\r\n        \"description\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/api/notification/transferInfo",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"notification",
+						"transferInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FDT failed unmark limit SHP",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const options = {\r",
+							"    url: \"https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate\",\r",
+							"    method: 'POST',\r",
+							"    header: { 'content-type': 'application/json' },\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\"input_token_state\":{\"token_type\":\"CREDENTIAL\",\"username\":\"GB-SVCAT-GTFF\",\"password\":\"X34Qb2fvfGmDW3\"},\"output_token_state\":{\"token_type\":\"JWT\"}})\r",
+							"\r",
+							"    }\r",
+							"};\r",
+							"\r",
+							"pm.sendRequest(options, function (err, res) {\r",
+							"    var jsonData = res.json();\r",
+							"    if (err) {\r",
+							"        console.log(err);\r",
+							"    }\r",
+							"    else {\r",
+							"        console.log(jsonData.issued_token);\r",
+							"        pm.environment.set(\"ib2bToken\", jsonData.issued_token);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-Global-Channel-Id",
+						"value": "MOBILE",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}",
+						"type": "text"
+					},
+					{
+						"key": "HSBC-CLIENT-IP",
+						"value": "145.26.54.24",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "873590",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-GBGF",
+						"value": "RBWM",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{ib2bToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentEngine\": \"GDI\",\r\n    \"serviceId\": \"HK11804103788800\",\r\n    \"entityServiceId\": \"HKGPHUBPIB=HK11804103788800\",\r\n    \"transactionInstructions\": {\r\n        \"paymentType\": \"GT\",\r\n        \"transactionId\": \"25645690\",\r\n        \"confirmationNo\": \"GPO2VSMDJJ\",\r\n        \"transferDate\": \"2024-03-20\",\r\n        \"transferType\": \"IMM\",\r\n        \"status\": \"Rejected\",\r\n        \"realTimeFailure\": \"N\",\r\n        \"debitAccount\": {\r\n            \"countryCode\": \"HK\",\r\n            \"groupMember\": \"HKAP\",\r\n            \"entity\": \"AP_GSP_HK_BRTB\",\r\n            \"productType\": \"AUDAVSAV\",\r\n            \"internalAccountNumber\": \"118041037888\",\r\n            \"externalAccountNumber\": \"118041037888\",\r\n            \"currencyCode\": \"AUD\",\r\n            \"name\": \"XXXXXVEN MXXXXXR\"\r\n        },\r\n        \"creditAccount\": {\r\n            \"countryCode\": \"MY\",\r\n            \"groupMember\": \"IUAT\",\r\n            \"entity\": \"APP024\",\r\n            \"productType\": \"WL1\",\r\n            \"internalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"externalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"currencyCode\": \"MYR\",\r\n            \"name\": \"TAN\"\r\n        },\r\n        \"amountSegment\": {\r\n            \"specifiedAmountFlag\": \"D\",\r\n            \"validate\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": \"28.42\"\r\n            },\r\n            \"enact\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10.0,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": 29.5\r\n            }\r\n        }\r\n    },\r\n    \"exchangeRate\": {\r\n        \"validate\": {\r\n            \"bookedRate\": \"N\",\r\n            \"rate\": 2.8428826,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        },\r\n        \"enact\": {\r\n            \"rate\": 2.9498002,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        }\r\n    },\r\n    \"contact\": {\r\n        \"emailAddress\": \"609121917@qq.com\",\r\n        \"languagePreference\": \"en\",\r\n        \"telephoneNumber\": \"\",\r\n        \"emailTriggered\": \"N\"\r\n    },\r\n    \"transferReason\": {\r\n        \"debitReasonCode\": \"\",\r\n        \"debitReasonText\": \"\",\r\n        \"creditReasonCode\": \"\",\r\n        \"creditReasonText\": \"\",\r\n        \"description\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wpb-fxp-asp-payees-notification-1.hsbc-gtow-gtff-cert.svc.default.shp.ape1.pre-prod.aws.cloud.hsbc/api/notification/transferInfo",
+					"protocol": "https",
+					"host": [
+						"wpb-fxp-asp-payees-notification-1",
+						"hsbc-gtow-gtff-cert",
+						"svc",
+						"default",
+						"shp",
+						"ape1",
+						"pre-prod",
+						"aws",
+						"cloud",
+						"hsbc"
+					],
+					"path": [
+						"api",
+						"notification",
+						"transferInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTransferDetail",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/HK/ID761736/SAML3/40\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{X-HSBC-Request-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}",
+						"description": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_747c9b10-d3e0-4727-8a5c-d585f93b4dae' IssueInstant='2024-05-07T08:19:39.637Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_747c9b10-d3e0-4727-8a5c-d585f93b4dae'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>w6t91eDPxMnXHnJrJAupt7qkHPDDmjfNgss1bTf7hxo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>O+K+IkCyS/ZeKXOz+WsSf+Y1Y+cdsYU8GZky6UQd2ZlMS3C3yj2Gu+qEfRan+HIMKvlvc6KeH54L3OxPITSDY+MCZ/uetVeMCIl5iKXJkDEHBEzqtF8lFn2p9Ezi14memMJg0XKYI+93SuhIwaJg1W5qMxP9V5T8eT6TKr6eEM3z6Bdziirt11BTPxVzRbK7mKA5PCHhesKzmBVM02eue+hShYcZPAtOCx7vh8B0ICtJJZuwVTHbCVZB+IfJfisX2QlRhHo+B6j4sngSEXa2VaIVaF03ydVBTJ6wbDZi6K1IS/cLI9tuj/sbzdGA6gIywWeenjz3wQC0TcwiAdZhiA==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK11808850988800A</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-07T08:19:38.637Z' NotOnOrAfter='2024-05-07T08:20:39.637Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>583b29b0-5859-11ee-b612-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "{{X-HSBC-Session-Correlation-Id}}"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "145.26.54.24"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK11808850988800A"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/transfer/gt/25650540?applicationName=AP_GSP_HK_BRTB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transfer",
+						"gt",
+						"25650540"
+					],
+					"query": [
+						{
+							"key": "applicationName",
+							"value": "AP_GSP_HK_BRTB"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"var moment=require('moment');\r",
+					"var datetime=moment().format(\"YYYYMMDDHHmmss\");\r",
+					"pm.globals.set(\"timestamp\",datetime);\r",
+					"pm.globals.set(\"X-HSBC-Request-Correlation-Id\",'picaro-test-'+datetime);\r",
+					"pm.globals.set(\"X-HSBC-Session-Correlation-Id\",'picaro-test-'+datetime);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

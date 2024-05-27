@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "472da179-2381-4ba9-8070-ff4a82134fcc",
+		"name": "GCDU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17456066"
+	},
+	"item": [
+		{
+			"name": "GCDU SAPI API",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"https://group-tfx-microservices-fxaas-support.apps.cf.skm-drn-01.cloud.hk.hsbc/api/user/info?entityCode=\"+\"HKHBAP-O88\"+\"&userName=\"+\"HKGM03\"+\"&password=\"+\"memans01\"+\"\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.json().saml3);\r",
+							"    pm.environment.set(\"userId\", res.json().userId);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}",
+						"type": "default"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{$guid}}",
+						"type": "default"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "GTFF",
+						"type": "default"
+					},
+					{
+						"key": "X-HSBC-GBGF",
+						"value": "RBWM",
+						"type": "default"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "GB",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\":\"40193863802000\",\r\n    \"countryCode\":\"UK\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://digitaldev-int-rbwm.systems.uk.hsbc/gdt-mds-gcdu-107-gtff-pa-sct-internal-proxy/v0/api/dao/gcdu/customers/v1/getAccountInfo",
+					"protocol": "https",
+					"host": [
+						"digitaldev-int-rbwm",
+						"systems",
+						"uk",
+						"hsbc"
+					],
+					"path": [
+						"gdt-mds-gcdu-107-gtff-pa-sct-internal-proxy",
+						"v0",
+						"api",
+						"dao",
+						"gcdu",
+						"customers",
+						"v1",
+						"getAccountInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "51c79ca6-f922-43d0-8eae-b798664c3dcc",
+		"name": "RetryNotification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17456066"
+	},
+	"item": [
+		{
+			"name": "GDI retry api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "eyJ0eXAiOiJKV1MiLCJraWQiOiJFMkVfVFJVU1RfU0FNTF9DTUJfVUFUIiwiYWxnIjoiUlMyNTYiLCJzY2giOiJ1cm46YWltOnRva2VuOmludGVybmFsIiwic2N2IjoiMS4wIiwidGt2IjoiMS4wIn0.eyJzdWIiOiJHQi1TVkNBVC1HVEZGIiwiZ3JwIjpbIkNOPUluZm9EaXItV1BCLUFQSS1VSy1TQVBJLURFVixPVT1XUEItQVBJLVVLLVNBUEktREVWLE9VPUFwcGxpY2F0aW9ucyxPVT1Hcm91cHMsREM9SW5mb0RpcixEQz1Qcm9kLERDPUhTQkMiLCJDTj1JbmZvRGlyLU9TU1QtQVBJLVNlY0dycC1Ob25Qcm9kLE9VPU9TU1QtQVBJLE9VPUFwcGxpY2F0aW9ucyxPVT1Hcm91cHMsREM9SW5mb0RpcixEQz1Qcm9kLERDPUhTQkMiLCJDTj1pbmZvRGlyLWNtYi1kc3AtaWIyYi1ucHJvZC1oayxPVT1IQkhLLE9VPUNNQi1QTEFURk9STS1EU1AsT1U9QXBwbGljYXRpb25zLE9VPUdyb3VwcyxEQz1JbmZvRGlyLERDPVByb2QsREM9SFNCQyJdLCJpc3MiOiJjbWJkc3AudWsuaHNiYy5jb20iLCJleHAiOjE3MTM4Mzc2MDYsImlhdCI6MTcxMzgzNzU3NiwianRpIjoiZmQ1M2NjNzktZjVlNS00YjNiLTlkY2ItNWM2ZmNmYjAxY2Y3Iiwic2l0IjoiYWQ6c3ZjOnByaW5jaXBhbCJ9.HDRWy_1BkVX1SJGjG1iB3DKx8rtpeypwe1dv3_S8X0LPIIqgVsazYeBasBZuOdNniDP0CeaCPuTs9KO9rwjnO9gJ6O6Zd3KM48wguavlzZ3d9qEY3YcTxfHqguf6_amrEmWPeAIlKYzS97lRon_HRb7c2R-4ZeftBPOaroR2kCfNTTQHEVqXJU77-2QuWh54zI5lw_zgct0p7-vcmGgCKBog1BMvbXPzZNss9A5VbM9GUanC35A1MRjttZAJGkMIxkhCtiFUR4V-bMOsRsVnOch-2q1cWkSx7SpYg3Ae5FjLG2KI9lCUx0fX4QX1VY76B2lU1R1_suwZ-8DH7o63Mw",
+						"type": "text"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "hk",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbap",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"payloadUuid\":\"5c3a51ab-900b-43ba-b333-f100809f2d35\",\r\n    \"paymentEngine\": \"GDI\",\r\n    \"serviceId\": \"HK11804103788800\",\r\n    \"entityServiceId\": \"HKGPHUBPIB=HK11804103788800\",\r\n    \"transactionInstructions\": {\r\n        \"paymentType\": \"GT\",\r\n        \"transactionId\": \"25645690\",\r\n        \"confirmationNo\": \"GPO2VSMDJJ\",\r\n        \"transferDate\": \"2024-03-20\",\r\n        \"transferType\": \"IMM\",\r\n        \"status\": \"Rejected\",\r\n        \"realTimeFailure\": \"N\",\r\n        \"debitAccount\": {\r\n            \"countryCode\": \"HK\",\r\n            \"groupMember\": \"HKAP\",\r\n            \"entity\": \"AP_GSP_HK_BRTB\",\r\n            \"productType\": \"AUDAVSAV\",\r\n            \"internalAccountNumber\": \"118041037888\",\r\n            \"externalAccountNumber\": \"118041037888\",\r\n            \"currencyCode\": \"AUD\",\r\n            \"name\": \"XXXXXVEN MXXXXXR\"\r\n        },\r\n        \"creditAccount\": {\r\n            \"countryCode\": \"MY\",\r\n            \"groupMember\": \"IUAT\",\r\n            \"entity\": \"APP024\",\r\n            \"productType\": \"WL1\",\r\n            \"internalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"externalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"currencyCode\": \"MYR\",\r\n            \"name\": \"TAN\"\r\n        },\r\n        \"amountSegment\": {\r\n            \"specifiedAmountFlag\": \"D\",\r\n            \"validate\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": \"28.42\"\r\n            },\r\n            \"enact\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10.0,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": 29.5\r\n            }\r\n        }\r\n    },\r\n    \"exchangeRate\": {\r\n        \"validate\": {\r\n            \"bookedRate\": \"N\",\r\n            \"rate\": 2.8428826,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        },\r\n        \"enact\": {\r\n            \"rate\": 2.9498002,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        }\r\n    },\r\n    \"contact\": {\r\n        \"emailAddress\": \"609121917@qq.com\",\r\n        \"languagePreference\": \"en\",\r\n        \"telephoneNumber\": \"\",\r\n        \"emailTriggered\": \"N\"\r\n    },\r\n    \"transferReason\": {\r\n        \"debitReasonCode\": \"\",\r\n        \"debitReasonText\": \"\",\r\n        \"creditReasonCode\": \"\",\r\n        \"creditReasonText\": \"\",\r\n        \"description\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://group-tfx-microservices-fxaas-noti-api-1.hsbc-gtow-gtff-cert.svc.default.shp.ape1.pre-prod.aws.cloud.hsbc/api/notification/transferInfo",
+					"protocol": "https",
+					"host": [
+						"group-tfx-microservices-fxaas-noti-api-1",
+						"hsbc-gtow-gtff-cert",
+						"svc",
+						"default",
+						"shp",
+						"ape1",
+						"pre-prod",
+						"aws",
+						"cloud",
+						"hsbc"
+					],
+					"path": [
+						"api",
+						"notification",
+						"transferInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wpb-fxp-asp-payees-notification-1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVCAT-GTFF\",\r",
+							"        \"password\": \"X34Qb2fvfGmDW3\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "hk",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbap",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"payloadUuid\":\"5c3a51ab-900b-43ba-b333-f100809f2d35\",\r\n    \"paymentEngine\": \"GDI\",\r\n    \"serviceId\": \"HK11804103788800\",\r\n    \"entityServiceId\": \"HKGPHUBPIB=HK11804103788800\",\r\n    \"transactionInstructions\": {\r\n        \"paymentType\": \"GT\",\r\n        \"transactionId\": \"25645690\",\r\n        \"confirmationNo\": \"GPO2VSMDJJ\",\r\n        \"transferDate\": \"2024-03-20\",\r\n        \"transferType\": \"IMM\",\r\n        \"status\": \"Rejected\",\r\n        \"realTimeFailure\": \"N\",\r\n        \"debitAccount\": {\r\n            \"countryCode\": \"UK\",\r\n            \"groupMember\": \"HKAP\",\r\n            \"entity\": \"AP_GSP_HK_BRTB\",\r\n            \"productType\": \"AUDAVSAV\",\r\n            \"internalAccountNumber\": \"40193863802000\",\r\n            \"externalAccountNumber\": \"118041037888\",\r\n            \"currencyCode\": \"AUD\",\r\n            \"name\": \"XXXXXVEN MXXXXXR\"\r\n        },\r\n        \"creditAccount\": {\r\n            \"countryCode\": \"MY\",\r\n            \"groupMember\": \"IUAT\",\r\n            \"entity\": \"APP024\",\r\n            \"productType\": \"WL1\",\r\n            \"internalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"externalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"currencyCode\": \"MYR\",\r\n            \"name\": \"TAN\"\r\n        },\r\n        \"amountSegment\": {\r\n            \"specifiedAmountFlag\": \"D\",\r\n            \"validate\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": \"28.42\"\r\n            },\r\n            \"enact\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10.0,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": 29.5\r\n            }\r\n        }\r\n    },\r\n    \"exchangeRate\": {\r\n        \"validate\": {\r\n            \"bookedRate\": \"N\",\r\n            \"rate\": 2.8428826,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        },\r\n        \"enact\": {\r\n            \"rate\": 2.9498002,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        }\r\n    },\r\n    \"contact\": {\r\n        \"emailAddress\": \"609121917@qq.com\",\r\n        \"languagePreference\": \"en\",\r\n        \"telephoneNumber\": \"\",\r\n        \"emailTriggered\": \"N\"\r\n    },\r\n    \"transferReason\": {\r\n        \"debitReasonCode\": \"\",\r\n        \"debitReasonText\": \"\",\r\n        \"creditReasonCode\": \"\",\r\n        \"creditReasonText\": \"\",\r\n        \"description\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://wpb-fxp-asp-payees-notification-1.hsbc-gtow-gtff-cert.svc.default.shp.ape1.pre-prod.aws.cloud.hsbc/api/notification/transferInfo",
+					"protocol": "https",
+					"host": [
+						"wpb-fxp-asp-payees-notification-1",
+						"hsbc-gtow-gtff-cert",
+						"svc",
+						"default",
+						"shp",
+						"ape1",
+						"pre-prod",
+						"aws",
+						"cloud",
+						"hsbc"
+					],
+					"path": [
+						"api",
+						"notification",
+						"transferInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wpb-fxp-asp-payees-notification-local",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVCAT-GTFF\",\r",
+							"        \"password\": \"X34Qb2fvfGmDW3\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "SG"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbsp"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"payloadUuid\":\"5c3a51ab-900b-43ba-b333-f100809f2d35\",\r\n    \"paymentEngine\": \"GDI\",\r\n    \"serviceId\": \"HK11804103788800\",\r\n    \"entityServiceId\": \"HKGPHUBPIB=HK11804103788800\",\r\n    \"transactionInstructions\": {\r\n        \"paymentType\": \"GT\",\r\n        \"transactionId\": \"25645690\",\r\n        \"confirmationNo\": \"GPO2VSMDJJ\",\r\n        \"transferDate\": \"2024-03-20\",\r\n        \"transferType\": \"IMM\",\r\n        \"status\": \"Rejected\",\r\n        \"realTimeFailure\": \"N\",\r\n        \"debitAccount\": {\r\n            \"countryCode\": \"UK\",\r\n            \"groupMember\": \"HRFB\",\r\n            \"entity\": \"AP_GSP_HK_BRTB\",\r\n            \"productType\": \"AUDAVSAV\",\r\n            \"internalAccountNumber\": \"40193863802000\",\r\n            \"externalAccountNumber\": \"118041037888\",\r\n            \"currencyCode\": \"AUD\",\r\n            \"name\": \"XXXXXVEN MXXXXXR\"\r\n        },\r\n        \"creditAccount\": {\r\n            \"countryCode\": \"MY\",\r\n            \"groupMember\": \"IUAT\",\r\n            \"entity\": \"APP024\",\r\n            \"productType\": \"WL1\",\r\n            \"internalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"externalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"currencyCode\": \"MYR\",\r\n            \"name\": \"TAN\"\r\n        },\r\n        \"amountSegment\": {\r\n            \"specifiedAmountFlag\": \"D\",\r\n            \"validate\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": \"28.42\"\r\n            },\r\n            \"enact\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10.0,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": 29.5\r\n            }\r\n        }\r\n    },\r\n    \"exchangeRate\": {\r\n        \"validate\": {\r\n            \"bookedRate\": \"N\",\r\n            \"rate\": 2.8428826,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        },\r\n        \"enact\": {\r\n            \"rate\": 2.9498002,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        }\r\n    },\r\n    \"contact\": {\r\n        \"emailAddress\": \"609121917@qq.com\",\r\n        \"languagePreference\": \"en\",\r\n        \"telephoneNumber\": \"\",\r\n        \"emailTriggered\": \"N\"\r\n    },\r\n    \"transferReason\": {\r\n        \"debitReasonCode\": \"\",\r\n        \"debitReasonText\": \"\",\r\n        \"creditReasonCode\": \"\",\r\n        \"creditReasonText\": \"\",\r\n        \"description\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/notification/transferInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"notification",
+						"transferInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wpb-fxp-ap-sa-payees-sapi-1_local",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "hk"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbap"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/notifications/template?countryCode=SG&groupMember=HBSP&communicationType=SMS&templateType=ADD_PAYEE_SMS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"notifications",
+						"template"
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "SG"
+						},
+						{
+							"key": "groupMember",
+							"value": "HBSP"
+						},
+						{
+							"key": "communicationType",
+							"value": "SMS"
+						},
+						{
+							"key": "templateType",
+							"value": "ADD_PAYEE_SMS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wpb-fxp-ap-sa-payees-sapi-1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVC-PTRADEV\",\r",
+							"        \"password\": \"9CB7-26feBE405\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "hk"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbap"
+					}
+				],
+				"url": {
+					"raw": "https://wpb-fxp-asp-sa-payees-1.hsbc-gtow-gtff-cert.svc.default.shp.ape1.pre-prod.aws.cloud.hsbc/api/v1/notifications/template?countryCode=SG&groupMember=HBSP&communicationType=SMS&templateType=ADD_PAYEE_SMS",
+					"protocol": "https",
+					"host": [
+						"wpb-fxp-asp-sa-payees-1",
+						"hsbc-gtow-gtff-cert",
+						"svc",
+						"default",
+						"shp",
+						"ape1",
+						"pre-prod",
+						"aws",
+						"cloud",
+						"hsbc"
+					],
+					"path": [
+						"api",
+						"v1",
+						"notifications",
+						"template"
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "SG"
+						},
+						{
+							"key": "groupMember",
+							"value": "HBSP"
+						},
+						{
+							"key": "communicationType",
+							"value": "SMS"
+						},
+						{
+							"key": "templateType",
+							"value": "ADD_PAYEE_SMS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wpb-fxp-ap-sa-payees-sapi-1_local/notifications/records",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "hk"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbap"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryCode\": \"hk\",\r\n    \"groupMember\": \"hbap\",\r\n    \"email\": \"picaro.x.e.ye@noexternalmail.hsbc.com\",\r\n    \"transactionId\": \"1234\",\r\n    \"template\": {\r\n        \"id\": 1,\r\n        \"communicationType\": \"EMAIL\",\r\n        \"countryCode\": \"HK\",\r\n        \"groupMember\": \"HBAP\",\r\n        \"languageCode\": \"ENG\",\r\n        \"templateName\": \"LST2.GEN.IMMEDIATE_TRANSFER\",\r\n        \"templateType\": \"IMMEDIATE_TRANSFER_EMAIL\"\r\n    },\r\n    \"customerIdentificationNumber\": \"101\",\r\n    \"trackingNumber\": \"picaro-test-data\",\r\n    \"requestReceivedTime\": \"1715828823661\",\r\n    \"status\": \"SUCCESS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/notifications/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"notifications",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GDI retry api_local",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVCAT-GTFF\",\r",
+							"        \"password\": \"X34Qb2fvfGmDW3\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "Content-Type",
+						"type": "text"
+					},
+					{
+						"key": "X-Hsbc-Session-Correlation-Id",
+						"value": "session-picaro-422",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "request-picaro-422",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "hk",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "hbap",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"payloadUuid\":\"picarotestsqs149258\",\r\n    \"paymentEngine\": \"GDI\",\r\n    \"serviceId\": \"HK11804103788800\",\r\n    \"entityServiceId\": \"HKGPHUBPIB=HK11804103788800\",\r\n    \"transactionInstructions\": {\r\n        \"paymentType\": \"GT\",\r\n        \"transactionId\": \"25645690\",\r\n        \"confirmationNo\": \"GPO2VSMDJJ\",\r\n        \"transferDate\": \"2024-03-20\",\r\n        \"transferType\": \"IMM\",\r\n        \"status\": \"Rejected\",\r\n        \"realTimeFailure\": \"N\",\r\n        \"debitAccount\": {\r\n            \"countryCode\": \"UK\",\r\n            \"groupMember\": \"HBEU\",\r\n            \"entity\": \"AP_GSP_HK_BRTB\",\r\n            \"productType\": \"AUDAVSAV\",\r\n            \"internalAccountNumber\": \"40193863802000\",\r\n            \"externalAccountNumber\": \"118041037888\",\r\n            \"currencyCode\": \"AUD\",\r\n            \"name\": \"XXXXXVEN MXXXXXR\"\r\n        },\r\n        \"creditAccount\": {\r\n            \"countryCode\": \"MY\",\r\n            \"groupMember\": \"IUAT\",\r\n            \"entity\": \"APP024\",\r\n            \"productType\": \"WL1\",\r\n            \"internalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"externalAccountNumber\": \"MYHBMB302387824026\",\r\n            \"currencyCode\": \"MYR\",\r\n            \"name\": \"TAN\"\r\n        },\r\n        \"amountSegment\": {\r\n            \"specifiedAmountFlag\": \"D\",\r\n            \"validate\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": \"28.42\"\r\n            },\r\n            \"enact\": {\r\n                \"debitCurrency\": \"AUD\",\r\n                \"debitAmount\": 10.0,\r\n                \"creditCurrency\": \"MYR\",\r\n                \"creditAmount\": 29.5\r\n            }\r\n        }\r\n    },\r\n    \"exchangeRate\": {\r\n        \"validate\": {\r\n            \"bookedRate\": \"N\",\r\n            \"rate\": 2.8428826,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        },\r\n        \"enact\": {\r\n            \"rate\": 2.9498002,\r\n            \"sourceCurrencyCode\": \"AUD\",\r\n            \"targetCurrencyCode\": \"MYR\"\r\n        }\r\n    },\r\n    \"contact\": {\r\n        \"emailAddress\": \"609121917@qq.com\",\r\n        \"languagePreference\": \"en\",\r\n        \"telephoneNumber\": \"\",\r\n        \"emailTriggered\": \"N\"\r\n    },\r\n    \"transferReason\": {\r\n        \"debitReasonCode\": \"\",\r\n        \"debitReasonText\": \"\",\r\n        \"creditReasonCode\": \"\",\r\n        \"creditReasonText\": \"\",\r\n        \"description\": \"\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/notification/transferInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"notification",
+						"transferInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GCDU API",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVCAT-GTFF\",\r",
+							"        \"password\": \"X34Qb2fvfGmDW3\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-GBGF",
+						"value": "RBWM",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "GB",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "picaro-test",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "GT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\":\"40193863802000\",\r\n    \"countryCode\":\"UK\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://digitaldev-int-rbwm.systems.uk.hsbc/gdt-mds-gcdu-107-gtff-pa-sct-internal-proxy/v0/api/dao/gcdu/customers/v1/getAccountInfo",
+					"protocol": "https",
+					"host": [
+						"digitaldev-int-rbwm",
+						"systems",
+						"uk",
+						"hsbc"
+					],
+					"path": [
+						"gdt-mds-gcdu-107-gtff-pa-sct-internal-proxy",
+						"v0",
+						"api",
+						"dao",
+						"gcdu",
+						"customers",
+						"v1",
+						"getAccountInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

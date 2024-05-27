@@ -1,0 +1,1026 @@
+{
+	"info": {
+		"_postman_id": "7742aa96-4c5a-4257-8f7e-ae500ff6ad83",
+		"name": "gtff",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17456066"
+	},
+	"item": [
+		{
+			"name": "gtff propose",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "9aa2ec20706011e8bf60006175"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-Saml2",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> MccWz61NZgVrY6jIFER5m7kToQv7thg4F/dI49mniZXfDU3PI0ErpAl2H9bKYHs4TJ6gqXg0lB6509GdU9lIhGFwwqowpEvHJbh2EKY1Vu33OjXIZ08qnON0/+fR+NF3GejPlQKfUtSxQf7Sw69F8H7I2MWpWV+nrokN+Ndl+c85ybo7sCwqUsqRmYnDg3DCDniooxO5WAKAI96Iz3zvIs3vgF1DWPtlg/Fr/cd2McSmF4fRbCgH6e2qZy2gRYtzyRpfnn6wsWRl9FQlybvBt7X1EYMMUEB+epmA1VmU0noWcytbE9UL0Nr9ef3cl0JaGACVREuYAq695sr2xPXprA== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"GUID\"> <saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transferType\": \"IMM\",\n    \"debitAmount\": {\n        \"amount\": 111,\n        \"currencyCode\": \"GBP\"\n    },\n    \"creditAmount\": null,\n    \"debitAccount\": {\n        \"internalIdentifier\": \"001162536888\",\n        \"externalIdentifier\": \"001162536888\",\n        \"productType\": \"GBPAVSAV\",\n        \"currency\": \"GBP\",\n        \"country\": \"HK\",\n        \"groupMember\": \"IUAT\",\n        \"name\": \"GBP Savings\"\n    },\n    \"creditAccount\": {\n        \"internalIdentifier\": \"111547\",\n        \"externalIdentifier\": \"test7Feb - NZ\",\n        \"productType\": \"S10\",\n        \"currency\": \"NZD\",\n        \"country\": \"NZ\",\n        \"groupMember\": \"GTFF\",\n        \"name\": \"test7Feb\"\n    },\n    \"description\": null,\n    \"debitReasonCode\": \"\",\n    \"debitReasonText\": \"\",\n    \"creditReasonCode\": \"\",\n    \"creditReasonText\": \"\",\n    \"transferProperties\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/payment/gtff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"payment",
+						"gtff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gtff confirm",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"/***/\r",
+							"pm.sendRequest({\r",
+							"    url: \"https://testdataservices.apps.cf.wgdc-drn-03.cloud.uk.hsbc/dsp/entity/VN/VN0090019670/SAML3/40?password=foobar12\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.text());\r",
+							"});\r",
+							"\r",
+							" //*/"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "VN"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HSBC"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_HK"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "441aa830d18411eeb25d927681"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}",
+						"description": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_9212a4f2-b8bb-463e-a691-695631c07394' IssueInstant='2024-05-10T14:53:24.167Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_9212a4f2-b8bb-463e-a691-695631c07394'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>YZfHCvzkodXB59CaUHLWgBqlYlf/852RENO6Si4Ml4E=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>LwUQRn0ACkBHlwu0GHFTtRspeSzoMYLjsAnti3UqKVhvHoUlVrYizgbQS2a7MuJR9M6CzNLD3Q6qEaa28AwGaoYQSL1SYx9gCO/04mTwP/DrK6ApGzGWpBgabt4Q8uzkqFmyeaBpzSg+08anWgWa/97worxkhNgKAD++3YA/Xp0rC5jAq8MkEoGMKEuRYTIRFOJ9XiXymaRhZ21mjR4TBHdGsk2T+88/J5ozO4JU/nXGzhqBpefF2k65AapKxAd4m5ASBrn792yvxMWw5Hy+iDtB2eHzuzKnF6rUxuPAeY8cWQyShB3ME/0RfOH3zLMfWJJbgohJDK5pXdhVCh7rJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>441aa830d18411eeb25d927681</saml:NameID></saml:Subject><saml:Conditions NotBefore='2024-05-10T14:53:23.167Z' NotOnOrAfter='2024-05-10T14:54:24.167Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>441aa830-d184-11ee-b25d-090207060801</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_EU01_PPROD_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "6476772"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"debitAmount\": {\n        \"amount\": 33,\n        \"currencyCode\": \"USD\"\n    },\n    \"debitAccount\": {\n        \"internalIdentifier\": \"VNHSBC009001967101\",\n        \"externalIdentifier\": \"VNHSBC009001967101\",\n        \"name\": \"Current Account\",\n        \"productType\": \"CUA\",\n        \"currency\": \"USD\",\n        \"country\": \"VN\",\n        \"entity\": \"APP200\"\n    },\n    \"creditAmount\": {\n        \"amount\": 33,\n        \"currencyCode\": \"USD\"\n    },\n    \"creditAccount\": {\n        \"internalIdentifier\": \"010002392540\",\n        \"externalIdentifier\": \"Expat payee - OI\",\n        \"name\": \"Expat payee\",\n        \"productType\": \"SVR\",\n        \"currency\": \"USD\",\n        \"country\": \"OI\",\n        \"entity\": \"APP_HPAY\",\n        \"serviceId\": \"ec4722e0b98411ed9b24927681\",\n        \"internalAccountNumber\": \"OIMBOS010002392540\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/payment/gtffWithWolf/25410620",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payment",
+						"gtffWithWolf",
+						"25410620"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "local gtff hk validate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK06830545700101"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-Saml2",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> MccWz61NZgVrY6jIFER5m7kToQv7thg4F/dI49mniZXfDU3PI0ErpAl2H9bKYHs4TJ6gqXg0lB6509GdU9lIhGFwwqowpEvHJbh2EKY1Vu33OjXIZ08qnON0/+fR+NF3GejPlQKfUtSxQf7Sw69F8H7I2MWpWV+nrokN+Ndl+c85ybo7sCwqUsqRmYnDg3DCDniooxO5WAKAI96Iz3zvIs3vgF1DWPtlg/Fr/cd2McSmF4fRbCgH6e2qZy2gRYtzyRpfnn6wsWRl9FQlybvBt7X1EYMMUEB+epmA1VmU0noWcytbE9UL0Nr9ef3cl0JaGACVREuYAq695sr2xPXprA== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"GUID\"> <saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"accountNumber\":\"501048425406\",\"country\":\"CN\",\"currency\":\"USD\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/payees/gtff/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"payees",
+						"gtff",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gtff hk summary",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml2",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> MccWz61NZgVrY6jIFER5m7kToQv7thg4F/dI49mniZXfDU3PI0ErpAl2H9bKYHs4TJ6gqXg0lB6509GdU9lIhGFwwqowpEvHJbh2EKY1Vu33OjXIZ08qnON0/+fR+NF3GejPlQKfUtSxQf7Sw69F8H7I2MWpWV+nrokN+Ndl+c85ybo7sCwqUsqRmYnDg3DCDniooxO5WAKAI96Iz3zvIs3vgF1DWPtlg/Fr/cd2McSmF4fRbCgH6e2qZy2gRYtzyRpfnn6wsWRl9FQlybvBt7X1EYMMUEB+epmA1VmU0noWcytbE9UL0Nr9ef3cl0JaGACVREuYAq695sr2xPXprA== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"GUID\"> <saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_08a53ddb-7d73-4d73-90ad-0dcc244322b0' IssueInstant='2022-09-28T02:06:35.633Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_08a53ddb-7d73-4d73-90ad-0dcc244322b0'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>4bKO61JvYovWQQCjB9JFiNysKKILWFj0FXpPQcexAes=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>EXGnebxjNc415j7J7dnbHgLrjoMT3+HoTkv7LKHbgP0ODG8IoJ8UklZDG9yIr8NDLUlUuSzI9CC2X50Ar1Y2TlJVY5LCSxnavOua66R7r3AoyHGdRIiq0fNL5ovawjg/Bk5Ppt3L4giB0rrHk1K9cZzRdpWyCu+f46sh5D10DalEzKDivIsv1/jsginIx80OtxO8/OUVf4xiCfF09YHTDMZ65ZjOp1FzhKhVxab8FKo/JY5dwEXg1Cna6ad8ssDAJUuzpuI4N5NevNhxIuC+y7VHPMCXOKy8FO8/2t7hyfN++wmCQTwha/9xtEakl9cq+4euhy8xAaCr4RbcEjRJsw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK00101380483301</saml:NameID></saml:Subject><saml:Conditions NotBefore='2022-09-28T02:06:34.633Z' NotOnOrAfter='2022-09-28T02:07:35.633Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>ec515170-f42d-11eb-bc97-0350565a170c</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK00908113400101"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"searchType\":\"HIS\",\"countryCode\":\"HK\",\"internalIdentifier\":\"\",\"externalIdentifier\":\"\",\"productType\":\"\",\"currencyCode\":\"\",\"applicationName\":\"\",\"fromDate\":\"20220309\",\"toDate\":\"20220609\",\"timezone\":\"+0800\",\"offset\":1,\"limit\":10,\"orderBy\":\"DATE\",\"order\":\"DES\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/payment/trfsum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"payment",
+						"trfsum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer ac",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_43ad162f-38df-46be-9a56-632b594dae69' IssueInstant='2022-04-12T10:49:08.810Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_43ad162f-38df-46be-9a56-632b594dae69'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>QtKQphiySEDJEvQHQZ1RQFx+aLRe1Hj3XJgpxtEyP4s=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>KLPJYhFVpsDbqaIytnXs0GnSRSsn0p3cai6n7mujfChKQNJu8+MvBnhIfzZTMw0E+w79dJNjhuzFYGmqmziQGewd1QFiw8KwNXBlSZn7GUJbFgRF8gPzo9GtXXI5aejyKYMcD6hGBa4L3xcJCYZZMG9oR5z0L3iuYc/AKshTxwuFHvuRu0w2ziJ6LFxT0K4T0xYIhs5U7BOjKRdozS1LyETaOfsLJ7GawkRgeUZOxA35Q0w6t7OgnkBIDKVFbPhcMRKYsKmNKCqtaQ4/8jOpEXJIOttB/+6O4/HhGPOj3yA4yTUgGjKgJHFbqh6tMbG7MSBFPgSqBYcroqv0rYtggg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK00101380483301</saml:NameID></saml:Subject><saml:Conditions NotBefore='2022-04-12T10:49:07.810Z' NotOnOrAfter='2022-04-12T10:50:08.810Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>ec515170-f42d-11eb-bc97-0350565a170c</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>30</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK00320569700101C"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transferType\": \"IMM\",\n    \"debitAmount\": {\n        \"amount\": 111,\n        \"currencyCode\": \"GBP\"\n    },\n    \"creditAmount\": null,\n    \"debitAccount\": {\n        \"internalIdentifier\": \"001162536888\",\n        \"externalIdentifier\": \"001162536888\",\n        \"productType\": \"GBPAVSAV\",\n        \"currency\": \"GBP\",\n        \"country\": \"HK\",\n        \"groupMember\": \"IUAT\",\n        \"name\": \"GBP Savings\"\n    },\n    \"creditAccount\": {\n        \"internalIdentifier\": \"111547\",\n        \"externalIdentifier\": \"test7Feb - NZ\",\n        \"productType\": \"S10\",\n        \"currency\": \"NZD\",\n        \"country\": \"NZ\",\n        \"groupMember\": \"GTFF\",\n        \"name\": \"test7Feb\"\n    },\n    \"description\": null,\n    \"debitReasonCode\": \"\",\n    \"debitReasonText\": \"\",\n    \"creditReasonCode\": \"\",\n    \"creditReasonText\": \"\",\n    \"transferProperties\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/customer-accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"customer-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payee list",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK18101998583300"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK18101998583300",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transferType\": \"IMM\",\n    \"debitAmount\": {\n        \"amount\": 111,\n        \"currencyCode\": \"GBP\"\n    },\n    \"creditAmount\": null,\n    \"debitAccount\": {\n        \"internalIdentifier\": \"001162536888\",\n        \"externalIdentifier\": \"001162536888\",\n        \"productType\": \"GBPAVSAV\",\n        \"currency\": \"GBP\",\n        \"country\": \"HK\",\n        \"groupMember\": \"IUAT\",\n        \"name\": \"GBP Savings\"\n    },\n    \"creditAccount\": {\n        \"internalIdentifier\": \"111547\",\n        \"externalIdentifier\": \"test7Feb - NZ\",\n        \"productType\": \"S10\",\n        \"currency\": \"NZD\",\n        \"country\": \"NZ\",\n        \"groupMember\": \"GTFF\",\n        \"name\": \"test7Feb\"\n    },\n    \"description\": null,\n    \"debitReasonCode\": \"\",\n    \"debitReasonText\": \"\",\n    \"creditReasonCode\": \"\",\n    \"creditReasonText\": \"\",\n    \"transferProperties\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/payees/gtff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"payees",
+						"gtff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "local health",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"https://group-tfx-microservices-fxaas-support.apps.cf.skm-drn-01.cloud.hk.hsbc/api/user/info?entityCode=\"+\"HKHBAP-O88\"+\"&userName=\"+\"HKGM03\"+\"&password=\"+\"memans01\"+\"\",\r",
+							"    method: \"GET\",\r",
+							"    header: {},\r",
+							"    body: {}\r",
+							"}, function (err, res) {\r",
+							"    console.log(res.text());\r",
+							"    pm.environment.set(\"saml3\", res.json().saml3);\r",
+							"    pm.environment.set(\"userId\", res.json().userId);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "{{$guid}}"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "{{saml3}}"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "{{userId}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transferType\": \"IMM\",\n    \"debitAmount\": {\n        \"amount\": 111,\n        \"currencyCode\": \"GBP\"\n    },\n    \"creditAmount\": null,\n    \"debitAccount\": {\n        \"internalIdentifier\": \"001162536888\",\n        \"externalIdentifier\": \"001162536888\",\n        \"productType\": \"GBPAVSAV\",\n        \"currency\": \"GBP\",\n        \"country\": \"HK\",\n        \"groupMember\": \"IUAT\",\n        \"name\": \"GBP Savings\"\n    },\n    \"creditAccount\": {\n        \"internalIdentifier\": \"111547\",\n        \"externalIdentifier\": \"test7Feb - NZ\",\n        \"productType\": \"S10\",\n        \"currency\": \"NZD\",\n        \"country\": \"NZ\",\n        \"groupMember\": \"GTFF\",\n        \"name\": \"test7Feb\"\n    },\n    \"description\": null,\n    \"debitReasonCode\": \"\",\n    \"debitReasonText\": \"\",\n    \"creditReasonCode\": \"\",\n    \"creditReasonText\": \"\",\n    \"transferProperties\": []\n}"
+				},
+				"url": {
+					"raw": "https://gtff2-dev.hsbc.com.hk/api/group-tfx-microservices-fxaas-gtff-api-cert-proxy/v2/health-status",
+					"protocol": "https",
+					"host": [
+						"gtff2-dev",
+						"hsbc",
+						"com",
+						"hk"
+					],
+					"path": [
+						"api",
+						"group-tfx-microservices-fxaas-gtff-api-cert-proxy",
+						"v2",
+						"health-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "local pop",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-Saml2",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_43ad162f-38df-46be-9a56-632b594dae69' IssueInstant='2022-04-12T10:49:08.810Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_43ad162f-38df-46be-9a56-632b594dae69'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>QtKQphiySEDJEvQHQZ1RQFx+aLRe1Hj3XJgpxtEyP4s=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>KLPJYhFVpsDbqaIytnXs0GnSRSsn0p3cai6n7mujfChKQNJu8+MvBnhIfzZTMw0E+w79dJNjhuzFYGmqmziQGewd1QFiw8KwNXBlSZn7GUJbFgRF8gPzo9GtXXI5aejyKYMcD6hGBa4L3xcJCYZZMG9oR5z0L3iuYc/AKshTxwuFHvuRu0w2ziJ6LFxT0K4T0xYIhs5U7BOjKRdozS1LyETaOfsLJ7GawkRgeUZOxA35Q0w6t7OgnkBIDKVFbPhcMRKYsKmNKCqtaQ4/8jOpEXJIOttB/+6O4/HhGPOj3yA4yTUgGjKgJHFbqh6tMbG7MSBFPgSqBYcroqv0rYtggg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK00101380483301</saml:NameID></saml:Subject><saml:Conditions NotBefore='2022-04-12T10:49:07.810Z' NotOnOrAfter='2022-04-12T10:50:08.810Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>ec515170-f42d-11eb-bc97-0350565a170c</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>30</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK00320569700101C"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/referenceData/purposeOfPayment?targetCountryCode=GB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"referenceData",
+						"purposeOfPayment"
+					],
+					"query": [
+						{
+							"key": "targetCountryCode",
+							"value": "GB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "local pop Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-Saml2",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml='http://www.hsbc.com/saas/assertion' xmlns:ds='http://www.w3.org/2000/09/xmldsig#' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ID='id_43ad162f-38df-46be-9a56-632b594dae69' IssueInstant='2022-04-12T10:49:08.810Z' Version='3.0'><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/><ds:SignatureMethod Algorithm='http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'/><ds:Reference URI='#id_43ad162f-38df-46be-9a56-632b594dae69'><ds:Transforms><ds:Transform Algorithm='http://www.w3.org/2000/09/xmldsig#enveloped-signature'/><ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'><ds:InclusiveNamespaces xmlns:ds='http://www.w3.org/2001/10/xml-exc-c14n#' PrefixList='#default saml ds xs xsi'/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm='http://www.w3.org/2001/04/xmlenc#sha256'/><ds:DigestValue>QtKQphiySEDJEvQHQZ1RQFx+aLRe1Hj3XJgpxtEyP4s=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>KLPJYhFVpsDbqaIytnXs0GnSRSsn0p3cai6n7mujfChKQNJu8+MvBnhIfzZTMw0E+w79dJNjhuzFYGmqmziQGewd1QFiw8KwNXBlSZn7GUJbFgRF8gPzo9GtXXI5aejyKYMcD6hGBa4L3xcJCYZZMG9oR5z0L3iuYc/AKshTxwuFHvuRu0w2ziJ6LFxT0K4T0xYIhs5U7BOjKRdozS1LyETaOfsLJ7GawkRgeUZOxA35Q0w6t7OgnkBIDKVFbPhcMRKYsKmNKCqtaQ4/8jOpEXJIOttB/+6O4/HhGPOj3yA4yTUgGjKgJHFbqh6tMbG7MSBFPgSqBYcroqv0rYtggg==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK00101380483301</saml:NameID></saml:Subject><saml:Conditions NotBefore='2022-04-12T10:49:07.810Z' NotOnOrAfter='2022-04-12T10:50:08.810Z'/><saml:AttributeStatement><saml:Attribute Name='GUID'><saml:AttributeValue>ec515170-f42d-11eb-bc97-0350565a170c</saml:AttributeValue></saml:Attribute><saml:Attribute Name='CAM'><saml:AttributeValue>30</saml:AttributeValue></saml:Attribute><saml:Attribute Name='KeyAlias'><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "HK00320569700101C"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/referenceData/purposeOfPayment?targetCountryCode=GB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"referenceData",
+						"purposeOfPayment"
+					],
+					"query": [
+						{
+							"key": "targetCountryCode",
+							"value": "GB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gtff hk eapi customer-token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-HSBC-CAM-Level",
+						"value": "40"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "OHI"
+					},
+					{
+						"key": "X-HSBC-Chnl-CountryCode",
+						"value": "HK"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBAP"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_GB"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "fee01cd0-3d49-11ec-877b-005056a6108d"
+					},
+					{
+						"key": "X-HSBC-Session-Correlation-Id",
+						"value": "2656221972106601947215064688054518241330407362064761627467450528611447722475559467350"
+					},
+					{
+						"key": "X-HSBC-Src-Device-Id",
+						"value": "203.112.82.2"
+					},
+					{
+						"key": "X-HSBC-Src-UserAgent",
+						"value": "Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405"
+					},
+					{
+						"key": "X-HSBC-User-Id",
+						"value": "9aa2ec20706011e8bf60006175"
+					},
+					{
+						"key": "X-HSBC-Saml3",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ID=\"id_03e51970-2bf6-4677-8eea-e761bbfad80e\" IssueInstant=\"2021-11-04T08:34:15.996Z\" Version=\"3.0\"><saml:Issuer>https://www.hsbc.com/rbwm/dtp</saml:Issuer><ds:Signature><ds:SignedInfo><ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/><ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/><ds:Reference URI=\"#id_03e51970-2bf6-4677-8eea-e761bbfad80e\"><ds:Transforms><ds:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"/><ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"><ds:InclusiveNamespaces xmlns:ds=\"http://www.w3.org/2001/10/xml-exc-c14n#\" PrefixList=\"#default saml ds xs xsi\"/></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"/><ds:DigestValue>zZhH4FMR+lVzhUDcHqeTA2ZeGOOHHAqKifr8LIJ3kaU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Tp64PR+Znd7eLNY7fWChZHtlQOn9mCryy+KLUdQPWmclHTExCosYV4O9DW6wcz9I3rd646LxDt/R ZLmu1Eak5CLpnrH3j9S0+ziMwQCYksXjpFMXP6XyLtSlyTI2ljy3r3YgWcrOThHuogRwUzAuQFJB 89UstfSyUBEUktspjdZjHhbDtFQL84Iq/g5Skc3zUvWj6N3sllI3RqEtyti6I2c8wYaKbZLJEl2m ThdFuBNg/l1PsTX4mxHLSTW58XwGXUfqQcbjznmQ1aWmRji3c4Yq5E7DKLwqBBZXGmvmCWR8M1JD LxzLFXVkNJTZaH0UR1AfYJS42NvQd+EobEvPJw==</ds:SignatureValue></ds:Signature><saml:Subject><saml:NameID>HK61100363388801</saml:NameID></saml:Subject><saml:Conditions NotBefore=\"2021-11-04T08:34:14.996Z\" NotOnOrAfter=\"2021-11-04T08:34:45.996Z\"/><saml:AttributeStatement><saml:Attribute Name=\"GUID\"><saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"CAM\"><saml:AttributeValue>40</saml:AttributeValue></saml:Attribute><saml:Attribute Name=\"KeyAlias\"><saml:AttributeValue>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</saml:AttributeValue></saml:Attribute></saml:AttributeStatement></saml:Assertion>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-IP-Id",
+						"value": "130.3.3.3"
+					},
+					{
+						"key": "X-HSBC-Saml",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> ZICWsmlvXvGlDI2E+S1RXBAj17H9L/uV56jA+9BId3CQl7o0sH5fX332b3oLpx3bDhkx2IorVt6rpIl1VRPbXKAzPHsVw397VNRJe03lG5MdRpLA3Yxs58/mXemjLwp2l3DI04h1qv1Hrf0U9CMeE5cssZ6trsjWzTmO0FB6CetmALFICXb97hiR9/WBxmspokDAaIjhOLtURtBmKoe7UtuNduHRaJKZPnW9PeaZYx1htjoYMfIrwuoJhx+eQWVPX7fcpKPtSytBBahIzRhnHVVjfb/PE58G0Zt+MJXGZCuEO3uTWXxEsY8tTTvWUrlclGxDEtsVXLHRy9X85o865g== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"IP\"> <saml:AttributeValue>10.210.206.208</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					},
+					{
+						"key": "X-HSBC-Saml2",
+						"value": "<saml:Assertion xmlns:saml=\"http://www.hsbc.com/saas/assertion\"> <Signature> <KeyAlias>E2E_TRUST_SAAS_AP01_BRTB1_ALIAS</KeyAlias> <SignatureValue> MccWz61NZgVrY6jIFER5m7kToQv7thg4F/dI49mniZXfDU3PI0ErpAl2H9bKYHs4TJ6gqXg0lB6509GdU9lIhGFwwqowpEvHJbh2EKY1Vu33OjXIZ08qnON0/+fR+NF3GejPlQKfUtSxQf7Sw69F8H7I2MWpWV+nrokN+Ndl+c85ybo7sCwqUsqRmYnDg3DCDniooxO5WAKAI96Iz3zvIs3vgF1DWPtlg/Fr/cd2McSmF4fRbCgH6e2qZy2gRYtzyRpfnn6wsWRl9FQlybvBt7X1EYMMUEB+epmA1VmU0noWcytbE9UL0Nr9ef3cl0JaGACVREuYAq695sr2xPXprA== </SignatureValue> </Signature> <saml:Subject> <saml:NameID>HK61100363388801</saml:NameID> </saml:Subject> <saml:Conditions NotBefore=\"2021-11-04T08:34:14.972Z\" NotOnOrAfter=\"2021-11-04T08:34:45.972Z\" /> <saml:AttributeStatement> <saml:Attribute Name=\"GUID\"> <saml:AttributeValue>6b22dbe0-bb29-11e8-8126-015056565c3f</saml:AttributeValue> </saml:Attribute> <saml:Attribute Name=\"CAM\"> <saml:AttributeValue>40</saml:AttributeValue> </saml:Attribute> </saml:AttributeStatement> </saml:Assertion>",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8091/api/customer-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"customer-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

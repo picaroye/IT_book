@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "63533dd4-507b-493b-9ff4-7ba5fb4a0752",
+		"name": "ICCM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17456066"
+	},
+	"item": [
+		{
+			"name": "Online email - preprod",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVC-PTRADEV\",\r",
+							"        \"password\": \"9CB7-26feBE405\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "11351528"
+					},
+					{
+						"key": "X-HSBC-Source-System-Name",
+						"value": "SG_WEALTH_COSMOS"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_SG"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBSP"
+					},
+					{
+						"key": "X-HSBC-GBGF",
+						"value": "WPB"
+					},
+					{
+						"key": "X-HSBC-Language-Preference-Code",
+						"value": "ENG"
+					},
+					{
+						"key": "X-HSBC-Chnl-Country-Code",
+						"value": "SG"
+					},
+					{
+						"key": "X-HSBC-Deliverable-Type",
+						"value": "NTF"
+					},
+					{
+						"key": "X-HSBC-Deliverable-Id",
+						"value": "WEALTH_COSMOS"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "picaro-test-426246"
+					},
+					{
+						"key": "X-HSBC-Client-Id",
+						"value": "88cbda6aa553483bb489adab306193e4"
+					},
+					{
+						"key": "X-HSBC-Client-Secret",
+						"value": "DFDd089FAfd243F1a7b545c4DfCf9770"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailDetails\": {\r\n        \"recipientEmailAddress\": \"picaro.x.e.ye@noexternalmail.hsbc.com\",\r\n        \"subject\": \"Email Statement\",\r\n        \"fromEmailAddress\": \"ADRESTEST-SVC-ICCM@exchtest.hsbc.com.hk\",\r\n        \"sender\": \"HSBC ICCM Testing Team\"\r\n    },\r\n    \"communicationDetails\": {\r\n        \"templateDescription\": \"LST2.GEN.ADD_PAYEE\",\r\n        \"segmentIdentifierCustomerGroup\": \"1000\",\r\n        \"customerIdentificationNumber\": \"101\"\r\n    },\r\n    \"mergeFieldList\": [{\r\n        \"name\": \"EmailContentFragment\",\r\n        \"value\": \"just to test online email\"\r\n    }]\r\n}"
+				},
+				"url": {
+					"raw": "https://digitaldev-int-rbwm.hk.hsbc/wpb-iccm-composeonlineemail-sa-sct-internal-proxy/v1/communications/online-email",
+					"protocol": "https",
+					"host": [
+						"digitaldev-int-rbwm",
+						"hk",
+						"hsbc"
+					],
+					"path": [
+						"wpb-iccm-composeonlineemail-sa-sct-internal-proxy",
+						"v1",
+						"communications",
+						"online-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Time-critical email - preprod",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const getTokenRequest = {\r",
+							"    url: 'https://cmb-ib2b-dsp-pprod-ap.hk.hsbc:8443/dsp/rest-sts/DSP_iB2B/iB2B_tokenTranslator?_action=translate',\r",
+							"    method: \"POST\",\r",
+							"    header: 'Content-Type: application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"    \"input_token_state\": {\r",
+							"        \"token_type\": \"CREDENTIAL\",\r",
+							"        \"username\": \"GB-SVC-PTRADEV\",\r",
+							"        \"password\": \"9CB7-26feBE405\"\r",
+							"    },\r",
+							"    \"output_token_state\": {\r",
+							"        \"token_type\": \"JWT\"\r",
+							"    }\r",
+							"})\r",
+							"    }\r",
+							"};\r",
+							"pm.sendRequest(getTokenRequest, function (err, res) {\r",
+							"    var data = JSON.parse(res.text());\r",
+							"    pm.globals.set(\"token\", data.issued_token);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Source-System-Id",
+						"value": "11351528",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Source-System-Name",
+						"value": "SG_WEALTH_COSMOS",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Locale",
+						"value": "en_SG",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Channel-Id",
+						"value": "MOBILE",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Group-Member",
+						"value": "HBSP",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-GBGF",
+						"value": "WPB",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Language-Preference-Code",
+						"value": "ENG",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Chnl-Country-Code",
+						"value": "SG",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Deliverable-Type",
+						"value": "NTF",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Deliverable-Id",
+						"value": "WEALTH_COSMOS",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Request-Correlation-Id",
+						"value": "picaro-test-426246",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Client-Id",
+						"value": "88cbda6aa553483bb489adab306193e4",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-Client-Secret",
+						"value": "DFDd089FAfd243F1a7b545c4DfCf9770",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-E2E-Trust-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-HSBC-iccategory",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailDetails\": {\r\n        \"subjectEncoding\": \"UTF-8\",\r\n        \"subject\": \"Welcome Letter\",\r\n        \"recipientEmailAddress\": \"474805449@qq.com\",\r\n        \"fromEmailAddress\": \"ADRESTEST-SVC-ICCM@exchtest.hsbc.com.hk\",\r\n        \"sender\": \"HSBC ICCM Testing Team\",\r\n        \"emailContentType\": \"text/html; charset=\\\"UTF-8\\\"\",\r\n        \"emailContent\": \"RGVhciBDdXN0b21lciAsV2VsY29tZSB0byBIU0JDIEJhbms=\",\r\n        \"customerIdentificationNumber\": \"101\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://digitaldev-int-rbwm.hk.hsbc/wpb-iccm-delivertimecriticalemail-sa-ap-sct-internal-proxy/v1/communications/time-critical-email",
+					"protocol": "https",
+					"host": [
+						"digitaldev-int-rbwm",
+						"hk",
+						"hsbc"
+					],
+					"path": [
+						"wpb-iccm-delivertimecriticalemail-sa-ap-sct-internal-proxy",
+						"v1",
+						"communications",
+						"time-critical-email"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
